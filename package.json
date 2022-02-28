@@ -1,0 +1,29 @@
+{
+  "name": "crawling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01_csv/index.js",
+  "scripts": {
+    "start1": "node 01_csv/index",
+    "start2": "node 02_excel/index",
+    "start3": "node 03_cheerio/index",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoo-minho/node-crawling.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yoo-minho/node-crawling/issues"
+  },
+  "homepage": "https://github.com/yoo-minho/node-crawling#readme",
+  "type": "module",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "cheerio": "^1.0.0-rc.10",
+    "csv-parser": "^3.0.0",
+    "xlsx": "^0.18.2"
+  }
+}
