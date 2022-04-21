@@ -1,11 +1,6 @@
-import csv from 'csv-parser';
-import fs from 'fs';
 import puppeteer from 'puppeteer';
-import axios from 'axios';
 
 const crawler = async () => {
-
-    const isProduction = process.env.NODE_ENV === 'production';
     try {
         const browser = await puppeteer.launch({headless: false})
         const page = await browser.newPage();
