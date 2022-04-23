@@ -31,6 +31,7 @@ const crawler = async () => {
     }
 
     async function getSrc(page) {
+        const selectorTimeout = 3000;
         try {
             const src = await page.evaluate(() => {
                 window.scrollBy(0, 0);
@@ -43,12 +44,10 @@ const crawler = async () => {
                         return url;
                     });
                 }
-                setTimeout(() => {
-                    window.scrollBy(0, 300);
-                }, 1000)
+                setTimeout(() => window.scrollBy(0, 300), 1000)
                 return data;
             })
-            await page.waitForSelector('figure[itemprop=image]', {timeout: 3000});
+            await page.waitForSelector('figure[itemprop=image]', {timeout: selectorTimeout});
             return src;
         } catch (e) {
             return [];
