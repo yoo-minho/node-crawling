@@ -1,6 +1,5 @@
 import puppeteer from 'puppeteer';
 import dotenv from 'dotenv';
-import axios from "axios";
 
 dotenv.config();
 
@@ -37,8 +36,6 @@ const crawler = async () => {
         await page.hover('form button');
         await page.waitForTimeout(3000);
         await page.click('form button');
-
-
 
 
 
